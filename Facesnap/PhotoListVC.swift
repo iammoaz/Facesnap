@@ -21,7 +21,8 @@ class PhotoListVC: UIViewController {
     }()
     
     lazy var mediaPickerManager: MediaPickerManager = {
-       let manager = MediaPickerManager(presetingViewController: self)
+        let manager = MediaPickerManager(presetingViewController: self)
+        manager.delegate = self
         return manager
     }()
     
@@ -54,7 +55,12 @@ class PhotoListVC: UIViewController {
     func presentImagePickerController() {
         mediaPickerManager.presentImagePickerController(animated: true)
     }
+}
 
+// MARK: - Media Picker Manager Delegate
 
+extension PhotoListVC: MediaPickerImageDelegate {
+    func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage) {
+    }
 }
 

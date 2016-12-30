@@ -9,14 +9,20 @@
 import UIKit
 import MobileCoreServices
 
+protocol MediaPickerImageDelegate: class {
+    func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage)
+}
+
 class MediaPickerManager: NSObject {
     private let imagePickerController = UIImagePickerController()
     private let presetingViewController: UIViewController
     
+    weak var delegate: MediaPickerImageDelegate?
+    
     init(presetingViewController: UIViewController) {
         self.presetingViewController = presetingViewController
         super.init()
-//        imagePickerController.delegate = self
+        imagePickerController.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             imagePickerController.sourceType = .camera
@@ -34,5 +40,15 @@ class MediaPickerManager: NSObject {
     
     func dismissImagePickerController(animated: Bool, completion: @escaping () -> Void) {
         imagePickerController.dismiss(animated: animated, completion: completion)
+    }
+}
+
+extension MediaPickerManager: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else {
+            return
+        }
+        delegate?.mediaPickerManager(manager: self, didFinishPickingImage: image)
     }
 }
