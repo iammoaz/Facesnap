@@ -10,7 +10,12 @@ import UIKit
 
 class PhotoFilterVC: UIViewController {
     
-    private var mainImage: UIImage
+    fileprivate var mainImage: UIImage {
+        didSet {
+            photoImageView.image = mainImage
+        }
+    }
+    
     fileprivate let context: CIContext
     fileprivate let eaglContext: EAGLContext
     
@@ -38,6 +43,7 @@ class PhotoFilterVC: UIViewController {
         collectionView.backgroundColor = .white
         collectionView.register(FilteredImageCell.self, forCellWithReuseIdentifier: FilteredImageCell.resuseIdentifier)
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
     
@@ -112,5 +118,14 @@ extension PhotoFilterVC: UICollectionViewDataSource {
         cell.image = ciImage
         
         return cell
+    }
+}
+
+// MARK: - Collection View Delegate
+extension PhotoFilterVC: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let ciImage = filteredImages[indexPath.row]
+        let cgImage = context.createCGImage(ciImage, from: ciImage.extent)
+        mainImage = UIImage(cgImage: cgImage!)
     }
 }
