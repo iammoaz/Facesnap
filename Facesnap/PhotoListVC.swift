@@ -57,8 +57,9 @@ class PhotoListVC: UIViewController {
 extension PhotoListVC: MediaPickerImageDelegate {
     func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage) {
         
-        let ciContext = CIContext(options: nil)
-        let photoFilterController = PhotoFilterVC(image: image, context: ciContext)
+        let eaglContext = EAGLContext(api: .openGLES2)!
+        let ciContext = CIContext(eaglContext: eaglContext)
+        let photoFilterController = PhotoFilterVC(image: image, context: ciContext, eaglContext: eaglContext)
         let navigationController = UINavigationController(rootViewController: photoFilterController)
         manager.dismissImagePickerController(animated: true) {
             self.present(navigationController, animated: true, completion: nil)
