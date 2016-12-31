@@ -13,6 +13,7 @@
 		413ECA7E1E1675000049A628 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 413ECA7C1E1675000049A628 /* LaunchScreen.storyboard */; };
 		413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8B1E1680AA0049A628 /* MediaPickerManager.swift */; };
 		413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8D1E16F24A0049A628 /* PhotoFilterVC.swift */; };
+		413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		413ECA7F1E1675000049A628 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		413ECA8B1E1680AA0049A628 /* MediaPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPickerManager.swift; sourceTree = "<group>"; };
 		413ECA8D1E16F24A0049A628 /* PhotoFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterVC.swift; sourceTree = "<group>"; };
+		413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				413ECA8B1E1680AA0049A628 /* MediaPickerManager.swift */,
+				413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
 				413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */,
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
