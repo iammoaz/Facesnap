@@ -31,11 +31,6 @@ class PhotoListVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     // MARK: - Layout
     override func viewWillLayoutSubviews() {
@@ -62,7 +57,8 @@ class PhotoListVC: UIViewController {
 extension PhotoListVC: MediaPickerImageDelegate {
     func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage) {
         
-        let photoFilterController = PhotoFilterVC(image: image)
+        let ciContext = CIContext(options: nil)
+        let photoFilterController = PhotoFilterVC(image: image, context: ciContext)
         let navigationController = UINavigationController(rootViewController: photoFilterController)
         manager.dismissImagePickerController(animated: true) {
             self.present(navigationController, animated: true, completion: nil)
