@@ -34,7 +34,14 @@ class PhotoFilterVC: UIViewController {
         
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: flowLayout)
         collectionView.backgroundColor = .white
+        collectionView.register(FilteredImageCell.self, forCellWithReuseIdentifier: FilteredImageCell.resuseIdentifier)
+        collectionView.dataSource = self
         return collectionView
+    }()
+    
+    fileprivate lazy var filteredImages: [UIImage] = {
+       let filteredImageBuilder = FilteredImageBuilder(image: self.mainImage)
+        return filteredImageBuilder.imageWithDefaultFilters()
     }()
     
     init(image: UIImage) {
@@ -79,5 +86,21 @@ class PhotoFilterVC: UIViewController {
             photoImageView.rightAnchor.constraint(equalTo: view.rightAnchor)
             ])
     }
+}
 
+// MARK: - Collection View Data Source
+extension PhotoFilterVC: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filteredImages.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilteredImageCell.resuseIdentifier, for: indexPath) as! FilteredImageCell
+        cell.imageView.image = filteredImages[indexPath.row]
+        return cell
+    }
 }

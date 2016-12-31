@@ -22,6 +22,7 @@ class MediaPickerManager: NSObject {
     init(presetingViewController: UIViewController) {
         self.presetingViewController = presetingViewController
         super.init()
+        
         imagePickerController.delegate = self
         
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
