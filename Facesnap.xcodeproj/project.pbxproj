@@ -23,6 +23,7 @@
 		413ECA9F1E18E9C70049A628 /* PhotoMetadataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */; };
 		41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABA1E191EB700DE02B8 /* LocationManager.swift */; };
 		41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */; };
+		41944ABF1E19569200DE02B8 /* PhotoFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABE1E19569200DE02B8 /* PhotoFetchedResultsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMetadataVC.swift; sourceTree = "<group>"; };
 		41944ABA1E191EB700DE02B8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		41944ABE1E19569200DE02B8 /* PhotoFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFetchedResultsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */,
 				413ECA931E1842860049A628 /* CoreDataController.swift */,
 				41944ABA1E191EB700DE02B8 /* LocationManager.swift */,
+				41944ABE1E19569200DE02B8 /* PhotoFetchedResultsController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */,
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
 				413ECA971E18A7C90049A628 /* Facesnap.xcdatamodeld in Sources */,
+				41944ABF1E19569200DE02B8 /* PhotoFetchedResultsController.swift in Sources */,
 				413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */,
 				41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */,
 			);
