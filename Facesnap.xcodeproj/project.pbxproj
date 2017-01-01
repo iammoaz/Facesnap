@@ -17,6 +17,9 @@
 		413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA911E17E63E0049A628 /* FilteredImageCell.swift */; };
 		413ECA941E1842860049A628 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA931E1842860049A628 /* CoreDataController.swift */; };
 		413ECA971E18A7C90049A628 /* Facesnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA951E18A7C90049A628 /* Facesnap.xcdatamodeld */; };
+		413ECA991E18AACA0049A628 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA981E18AACA0049A628 /* Photo.swift */; };
+		413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9A1E18AC7D0049A628 /* Tag.swift */; };
+		413ECA9D1E18ACA20049A628 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9C1E18ACA20049A628 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		413ECA911E17E63E0049A628 /* FilteredImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageCell.swift; sourceTree = "<group>"; };
 		413ECA931E1842860049A628 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 		413ECA961E18A7C90049A628 /* Facesnap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Facesnap.xcdatamodel; sourceTree = "<group>"; };
+		413ECA981E18AACA0049A628 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		413ECA9A1E18AC7D0049A628 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
+		413ECA9C1E18ACA20049A628 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +119,9 @@
 			isa = PBXGroup;
 			children = (
 				413ECA951E18A7C90049A628 /* Facesnap.xcdatamodeld */,
+				413ECA981E18AACA0049A628 /* Photo.swift */,
+				413ECA9A1E18AC7D0049A628 /* Tag.swift */,
+				413ECA9C1E18ACA20049A628 /* Location.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -200,8 +209,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */,
+				413ECA9D1E18ACA20049A628 /* Location.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
+				413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */,
 				413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */,
+				413ECA991E18AACA0049A628 /* Photo.swift in Sources */,
 				413ECA941E1842860049A628 /* CoreDataController.swift in Sources */,
 				413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */,
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
