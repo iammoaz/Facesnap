@@ -67,11 +67,6 @@ class PhotoMetadataVC: UITableViewController {
         let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.savePhotoWithMetadata))
         navigationItem.rightBarButtonItem = saveButton
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 }
 
 // MARK: - Helper Methods
@@ -124,5 +119,17 @@ extension PhotoMetadataVC {
             break
         }
         return cell
+    }
+}
+
+// MARK: - Table View Delegate
+extension PhotoMetadataVC {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            return imageViewHeight
+        default:
+            return tableView.rowHeight
+        }
     }
 }
