@@ -15,6 +15,7 @@
 		413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8D1E16F24A0049A628 /* PhotoFilterVC.swift */; };
 		413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */; };
 		413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA911E17E63E0049A628 /* FilteredImageCell.swift */; };
+		413ECA941E1842860049A628 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA931E1842860049A628 /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		413ECA8D1E16F24A0049A628 /* PhotoFilterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFilterVC.swift; sourceTree = "<group>"; };
 		413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageBuilder.swift; sourceTree = "<group>"; };
 		413ECA911E17E63E0049A628 /* FilteredImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageCell.swift; sourceTree = "<group>"; };
+		413ECA931E1842860049A628 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				413ECA8B1E1680AA0049A628 /* MediaPickerManager.swift */,
 				413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */,
+				413ECA931E1842860049A628 /* CoreDataController.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
 				413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */,
+				413ECA941E1842860049A628 /* CoreDataController.swift in Sources */,
 				413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */,
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
 				413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */,
