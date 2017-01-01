@@ -34,5 +34,7 @@
 	<string>Facesnap would like to access your photos library to select a photo</string>
 	<key>NSCameraUsageDescription</key>
 	<string>Facesnap would like to access your devices camera to take a photo</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Facesnap uses your location to use location metadata on a photo</string>
 </dict>
 </plist>

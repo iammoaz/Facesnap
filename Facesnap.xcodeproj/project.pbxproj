@@ -21,6 +21,7 @@
 		413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9A1E18AC7D0049A628 /* Tag.swift */; };
 		413ECA9D1E18ACA20049A628 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9C1E18ACA20049A628 /* Location.swift */; };
 		413ECA9F1E18E9C70049A628 /* PhotoMetadataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */; };
+		41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABA1E191EB700DE02B8 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		413ECA9A1E18AC7D0049A628 /* Tag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		413ECA9C1E18ACA20049A628 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMetadataVC.swift; sourceTree = "<group>"; };
+		41944ABA1E191EB700DE02B8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				413ECA8B1E1680AA0049A628 /* MediaPickerManager.swift */,
 				413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */,
 				413ECA931E1842860049A628 /* CoreDataController.swift */,
+				41944ABA1E191EB700DE02B8 /* LocationManager.swift */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
 				413ECA971E18A7C90049A628 /* Facesnap.xcdatamodeld in Sources */,
 				413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */,
+				41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +380,7 @@
 				413ECA841E1675000049A628 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
