@@ -16,6 +16,7 @@
 		413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */; };
 		413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA911E17E63E0049A628 /* FilteredImageCell.swift */; };
 		413ECA941E1842860049A628 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA931E1842860049A628 /* CoreDataController.swift */; };
+		413ECA971E18A7C90049A628 /* Facesnap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA951E18A7C90049A628 /* Facesnap.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		413ECA8F1E172E700049A628 /* FilteredImageBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageBuilder.swift; sourceTree = "<group>"; };
 		413ECA911E17E63E0049A628 /* FilteredImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilteredImageCell.swift; sourceTree = "<group>"; };
 		413ECA931E1842860049A628 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		413ECA961E18A7C90049A628 /* Facesnap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Facesnap.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		413ECA891E1675F60049A628 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				413ECA951E18A7C90049A628 /* Facesnap.xcdatamodeld */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				413ECA941E1842860049A628 /* CoreDataController.swift in Sources */,
 				413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */,
 				413ECA741E1675000049A628 /* AppDelegate.swift in Sources */,
+				413ECA971E18A7C90049A628 /* Facesnap.xcdatamodeld in Sources */,
 				413ECA8E1E16F24A0049A628 /* PhotoFilterVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,6 +362,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		413ECA951E18A7C90049A628 /* Facesnap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				413ECA961E18A7C90049A628 /* Facesnap.xcdatamodel */,
+			);
+			currentVersion = 413ECA961E18A7C90049A628 /* Facesnap.xcdatamodel */;
+			path = Facesnap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 413ECA681E1675000049A628 /* Project object */;
 }
