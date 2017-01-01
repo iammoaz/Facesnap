@@ -48,6 +48,8 @@ class PhotoListVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        setupNavigationBar()
+        
         collectionView.dataSource = dataSource
         self.automaticallyAdjustsScrollViewInsets = false
     }
@@ -81,7 +83,6 @@ class PhotoListVC: UIViewController {
 }
 
 // MARK: - Media Picker Manager Delegate
-
 extension PhotoListVC: MediaPickerImageDelegate {
     func mediaPickerManager(manager: MediaPickerManager, didFinishPickingImage image: UIImage) {
         
@@ -92,6 +93,18 @@ extension PhotoListVC: MediaPickerImageDelegate {
         manager.dismissImagePickerController(animated: true) {
             self.present(navigationController, animated: true, completion: nil)
         }
+    }
+}
+
+// MARK: - Navigation
+extension PhotoListVC {
+    fileprivate func setupNavigationBar() {
+        let sortTagsButton = UIBarButtonItem(title: "Tags", style: .plain, target: self, action: #selector(self.presentSortVC))
+        navigationItem.setRightBarButton(sortTagsButton, animated: true)
+    }
+    
+    @objc private func presentSortVC() {
+        
     }
 }
 

@@ -13,6 +13,12 @@ import CoreLocation
 class Photo: NSManagedObject {
     static let entityName = String(describing: Photo.self)
     
+    static var allPhotosRequest: NSFetchRequest<NSFetchRequestResult> = {
+        let request  = NSFetchRequest<NSFetchRequestResult>(entityName: Photo.entityName)
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        return request
+    }()
+    
     class func photo(withImage image:UIImage) -> Photo {
         let photo = NSEntityDescription.insertNewObject(forEntityName: Photo.entityName, into: CoreDataController.sharedInstance.managedObjectContext) as! Photo
         photo.date = NSDate().timeIntervalSince1970
@@ -56,10 +62,10 @@ extension Photo {
     }
 }
 
-extension Photo {
-    static var allPhotosRequest: NSFetchRequest<NSFetchRequestResult> = {
-        let request  = NSFetchRequest<NSFetchRequestResult>(entityName: Photo.entityName)
-        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
-        return request
-    }()
-}
+//extension Photo {
+//    static var allPhotosRequest: NSFetchRequest<NSFetchRequestResult> = {
+//        let request  = NSFetchRequest<NSFetchRequestResult>(entityName: Photo.entityName)
+//        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+//        return request
+//    }()
+//}

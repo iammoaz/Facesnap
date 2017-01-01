@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4138D1C21E19C29E00FC0442 /* PhotoSortListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4138D1C11E19C29E00FC0442 /* PhotoSortListVC.swift */; };
 		413ECA741E1675000049A628 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA731E1675000049A628 /* AppDelegate.swift */; };
 		413ECA761E1675000049A628 /* PhotoListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA751E1675000049A628 /* PhotoListVC.swift */; };
 		413ECA7B1E1675000049A628 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 413ECA7A1E1675000049A628 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4138D1C11E19C29E00FC0442 /* PhotoSortListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSortListVC.swift; sourceTree = "<group>"; };
 		413ECA701E1675000049A628 /* Facesnap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facesnap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		413ECA731E1675000049A628 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		413ECA751E1675000049A628 /* PhotoListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListVC.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				413ECA751E1675000049A628 /* PhotoListVC.swift */,
 				413ECA8D1E16F24A0049A628 /* PhotoFilterVC.swift */,
 				413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */,
+				4138D1C11E19C29E00FC0442 /* PhotoSortListVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */,
 				41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */,
 				413ECA9D1E18ACA20049A628 /* Location.swift in Sources */,
+				4138D1C21E19C29E00FC0442 /* PhotoSortListVC.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
 				41944AC11E19598F00DE02B8 /* PhotoCell.swift in Sources */,
 				413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */,
