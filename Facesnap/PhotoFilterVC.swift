@@ -142,6 +142,7 @@ extension PhotoFilterVC {
     }
     
     @objc fileprivate func presentMetadataVC() {
-        
+        let photoMetaDataVC = PhotoMetadataVC(photo: self.mainImage)
+        self.navigationController?.pushViewController(photoMetaDataVC, animated: true)
     }
 }

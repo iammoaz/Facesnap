@@ -64,10 +64,65 @@ class PhotoMetadataVC: UITableViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(self.savePhotoWithMetadata))
+        navigationItem.rightBarButtonItem = saveButton
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+}
+
+// MARK: - Helper Methods
+extension PhotoMetadataVC {
+    func tagsFromTextField() -> [String] {
+        guard let tags = tagsTextField.text else { return [] }
+        let commaSeperatedSubSequences = tags.characters.split {$0 == ","}
+        let commaSeperatedStrings = commaSeperatedSubSequences.map(String.init)
+        let lowercaseTags = commaSeperatedStrings.map { $0.lowercased() }
+        
+        return lowercaseTags.map { $0.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) }
+    }
+}
+
+// MARK: - Persistence
+extension PhotoMetadataVC {
+    @objc fileprivate func savePhotoWithMetadata() {
+        let tags = tagsFromTextField()
+        Photo.photoWith(image: photo, tags: tags, location: location)
+        CoreDataController.save()
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - Table View Data Source
+extension PhotoMetadataVC {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        cell.selectionStyle = .none
+        
+        switch (indexPath.section, indexPath.row) {
+        case (0, 0):
+            cell.contentView.addSubview(photoImageView)
+            
+            NSLayoutConstraint.activate([
+                photoImageView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
+                photoImageView.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor),
+                photoImageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+                photoImageView.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor)
+                ])
+        default:
+            break
+        }
+        return cell
     }
 }
