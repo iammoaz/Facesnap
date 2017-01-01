@@ -12,7 +12,7 @@ import CoreLocation
 class PhotoMetadataVC: UITableViewController {
     
     fileprivate let photo: UIImage
-//    fileprivate var locationManager: LocationManager!
+    fileprivate var locationManager: LocationManager!
     fileprivate var location: CLLocation?
     
     init(photo: UIImage) {
@@ -115,6 +115,18 @@ extension PhotoMetadataVC {
                 photoImageView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
                 photoImageView.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor)
                 ])
+        case (1, 0):
+            cell.contentView.addSubview(locationLabel)
+            cell.contentView.addSubview(activityIndicator)
+            
+            NSLayoutConstraint.activate([
+                locationLabel.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
+                locationLabel.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: 16.0),
+                locationLabel.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+                locationLabel.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor, constant: 16.0),
+                activityIndicator.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
+                activityIndicator.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor)
+                ])
         default:
             break
         }
@@ -130,6 +142,30 @@ extension PhotoMetadataVC {
             return imageViewHeight
         default:
             return tableView.rowHeight
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch (indexPath.section, indexPath.row) {
+        case (1, 0):
+            locationLabel.isHidden = true
+            activityIndicator.isHidden = false
+            activityIndicator.startAnimating()
+            
+            locationManager = LocationManager()
+            locationManager.onLocationFix = { placemark, error in
+                if let placemark = placemark {
+                    self.location = placemark.location
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                    self.locationLabel.isHidden = false
+                    
+                    guard let name = placemark.name, let city = placemark.locality, let area = placemark.administrativeArea else { return }
+                    self.locationLabel.text = "\(name), \(city), \(area)"
+                }
+            }
+        default:
+            break
         }
     }
 }
