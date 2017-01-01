@@ -16,7 +16,7 @@ class Photo: NSManagedObject {
     class func photo(withImage image:UIImage) -> Photo {
         let photo = NSEntityDescription.insertNewObject(forEntityName: Photo.entityName, into: CoreDataController.sharedInstance.managedObjectContext) as! Photo
         photo.date = NSDate().timeIntervalSince1970
-        photo.image = UIImageJPEGRepresentation(image, 1.0)! as NSData
+        photo.image = UIImageJPEGRepresentation(image, 1.0)!
         return photo
     }
     
@@ -47,7 +47,19 @@ class Photo: NSManagedObject {
 
 extension Photo {
     @NSManaged var date: TimeInterval
-    @NSManaged var image: NSData
+    @NSManaged var image: Data
     @NSManaged var tags: Set<Tag>
     @NSManaged var location: Location?
+    
+    var photoImage: UIImage {
+        return UIImage(data: image)!
+    }
+}
+
+extension Photo {
+    static var allPhotosRequest: NSFetchRequest<NSFetchRequestResult> = {
+        let request  = NSFetchRequest<NSFetchRequestResult>(entityName: Photo.entityName)
+        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        return request
+    }()
 }

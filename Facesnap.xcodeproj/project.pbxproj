@@ -24,6 +24,7 @@
 		41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABA1E191EB700DE02B8 /* LocationManager.swift */; };
 		41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */; };
 		41944ABF1E19569200DE02B8 /* PhotoFetchedResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABE1E19569200DE02B8 /* PhotoFetchedResultsController.swift */; };
+		41944AC11E19598F00DE02B8 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944AC01E19598F00DE02B8 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		41944ABA1E191EB700DE02B8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 		41944ABE1E19569200DE02B8 /* PhotoFetchedResultsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoFetchedResultsController.swift; sourceTree = "<group>"; };
+		41944AC01E19598F00DE02B8 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				413ECA911E17E63E0049A628 /* FilteredImageCell.swift */,
+				41944AC01E19598F00DE02B8 /* PhotoCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -224,6 +227,7 @@
 				41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */,
 				413ECA9D1E18ACA20049A628 /* Location.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
+				41944AC11E19598F00DE02B8 /* PhotoCell.swift in Sources */,
 				413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */,
 				413ECA9F1E18E9C70049A628 /* PhotoMetadataVC.swift in Sources */,
 				413ECA921E17E63E0049A628 /* FilteredImageCell.swift in Sources */,
