@@ -22,6 +22,7 @@
 		413ECA9D1E18ACA20049A628 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9C1E18ACA20049A628 /* Location.swift */; };
 		413ECA9F1E18E9C70049A628 /* PhotoMetadataVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */; };
 		41944ABB1E191EB700DE02B8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABA1E191EB700DE02B8 /* LocationManager.swift */; };
+		41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		413ECA9C1E18ACA20049A628 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		413ECA9E1E18E9C70049A628 /* PhotoMetadataVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoMetadataVC.swift; sourceTree = "<group>"; };
 		41944ABA1E191EB700DE02B8 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				413ECA981E18AACA0049A628 /* Photo.swift */,
 				413ECA9A1E18AC7D0049A628 /* Tag.swift */,
 				413ECA9C1E18ACA20049A628 /* Location.swift */,
+				41944ABC1E19339F00DE02B8 /* PhotoDataSource.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				413ECA901E172E700049A628 /* FilteredImageBuilder.swift in Sources */,
+				41944ABD1E19339F00DE02B8 /* PhotoDataSource.swift in Sources */,
 				413ECA9D1E18ACA20049A628 /* Location.swift in Sources */,
 				413ECA8C1E1680AA0049A628 /* MediaPickerManager.swift in Sources */,
 				413ECA9B1E18AC7D0049A628 /* Tag.swift in Sources */,
