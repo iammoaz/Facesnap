@@ -127,6 +127,14 @@ extension PhotoMetadataVC {
                 activityIndicator.centerYAnchor.constraint(equalTo: cell.contentView.centerYAnchor),
                 activityIndicator.centerXAnchor.constraint(equalTo: cell.contentView.centerXAnchor)
                 ])
+        case (2, 0):
+            cell.contentView.addSubview(tagsTextField)
+            NSLayoutConstraint.activate([
+                tagsTextField.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
+                tagsTextField.rightAnchor.constraint(equalTo: cell.contentView.rightAnchor, constant: 16.0),
+                tagsTextField.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor),
+                tagsTextField.leftAnchor.constraint(equalTo: cell.contentView.leftAnchor, constant: 16.0)
+                ])
         default:
             break
         }
@@ -166,6 +174,15 @@ extension PhotoMetadataVC {
             }
         default:
             break
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0: return "Photo"
+        case 1: return "Enter a location"
+        case 2: return "Enter tags"
+        default: return nil
         }
     }
 }
