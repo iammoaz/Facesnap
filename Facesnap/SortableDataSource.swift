@@ -17,11 +17,16 @@ extension Tag: CustomTitleConvertible {}
 
 class SortableDataSource<SortType: CustomTitleConvertible>: NSObject, UITableViewDataSource where SortType: NSManagedObject {
     
-    private let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
+    fileprivate let fetchedResultsController: NSFetchedResultsController<NSFetchRequestResult>
+    
+    var results: [SortType] {
+        return fetchedResultsController.fetchedObjects as! [SortType]
+    }
     
     init(fetchRequest: NSFetchRequest<NSFetchRequestResult>, managedObjectContext moc: NSManagedObjectContext) {
         self.fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         super.init()
+        executeFetch()
     }
     
     func executeFetch() {

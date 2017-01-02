@@ -105,7 +105,9 @@ extension PhotoListVC {
     
     @objc private func presentSortVC() {
         let tagDataSource = SortableDataSource<Tag>(fetchRequest: Tag.allTagsRequest, managedObjectContext: CoreDataController.sharedInstance.managedObjectContext)
-        let sortController = PhotoSortListVC(dataSource: tagDataSource)
+        let sortItemSelector = SortItemSelector(sortItems: tagDataSource.results)
+        
+        let sortController = PhotoSortListVC(dataSource: tagDataSource, sortItemSelector: sortItemSelector)
         let navigationController = UINavigationController(rootViewController: sortController)
         present(navigationController, animated: true, completion: nil)
     }
