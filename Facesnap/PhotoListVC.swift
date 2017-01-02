@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class PhotoListVC: UIViewController {
     
@@ -108,6 +109,25 @@ extension PhotoListVC {
         let sortItemSelector = SortItemSelector(sortItems: tagDataSource.results)
         
         let sortController = PhotoSortListVC(dataSource: tagDataSource, sortItemSelector: sortItemSelector)
+        sortController.onSortSelection = { checkedItems in
+            
+            
+            if !checkedItems.isEmpty {
+                var predicates = [NSPredicate]()
+                for tag in checkedItems {
+                    let predicate = NSPredicate(format: "%K CONTAINS %@", "tags.title", tag.title)
+                    predicates.append(predicate)
+                }
+                
+                let compoundPredicate = NSCompoundPredicate(type: .or, subpredicates: predicates)
+                self.dataSource.performFetch(withPredicate: compoundPredicate)
+                
+            } else {
+                self.dataSource.performFetch(withPredicate: nil)
+            }
+
+        }
+        
         let navigationController = UINavigationController(rootViewController: sortController)
         present(navigationController, animated: true, completion: nil)
     }
