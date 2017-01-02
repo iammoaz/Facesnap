@@ -7,16 +7,28 @@
 //
 
 import UIKit
+import CoreData
 
-class PhotoSortListVC: UITableViewController {
+class PhotoSortListVC<SortType: CustomTitleConvertible>: UITableViewController where SortType: NSManagedObject {
+    
+    let dataSource: SortableDataSource<SortType>
+//    let sortItemSelector: SortItemSelector<SortType>
+    
+    init(dataSource: SortableDataSource<SortType>) {
+        self.dataSource = dataSource
+        super.init(style: .grouped)
+        tableView.dataSource = dataSource
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigation()
     }
-}
-
-extension PhotoSortListVC {
+    
     fileprivate func setupNavigation() {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismissPhotoSortListVC))
         navigationItem.rightBarButtonItem = doneButton
